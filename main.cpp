@@ -8,9 +8,7 @@
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
-#ifndef STASSID
-  #define STASSID "xxxxxx"
-  #define STAPSK  "xxxxxx"
+#include "password.h"
 #endif
 #define NAME  "Horloge RGB"
 #define VERSION   "1.5"
@@ -41,7 +39,7 @@
 #define LUM_AMBIANTE_MIN        0                           // valeur mini de luminosité ambiante
 #define LUM_AMBIANTE_MAX        1000                        //Valeur maxi de luuminsosité ambiante (54612 pour le capteur BH1750 mais ça correspond à une luminosté énorme
 #define COEFF_LUM               1                           // coefficient multiplicateur de la luminosité ambiante pour calculer celle du ruban
-#define PASSWORD                "xxxxxx"                  // mot de passe pour mise à jour OTA
+
 #define NTP_SERVER              "fr.pool.ntp.org"
 #define NTP_DELAI               3600*2                      // temps en secondes entre 2 interrogations du serveur NTP
 #define Hsaison                 2                           // heures du changement d'heure saisonnier (+1 auto pour l'autre saison)
