@@ -9,7 +9,7 @@
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
 #include "password.h"
-#endif
+
 #define NAME  "Horloge RGB"
 #define VERSION   "1.5"
 #define HOSTNAME "HorlogeRGB"
